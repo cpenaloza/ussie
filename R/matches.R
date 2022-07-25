@@ -3,7 +3,7 @@
 #' @param data_engsoc dataframe from engsoccerdata package
 #' @param country one of spain, italy, germany, holland, england
 #'
-#' @return A dataframe, tibble with columns `country`, `date`, `season`, `tier`,
+#' @return A dataframe, tibble with columns `country`, `tier`, `season`, `date`,
 #'     `home`, `visitor`, `goals_home`, `goals_visitor`.
 #' @export
 #'
