@@ -4,7 +4,7 @@ Version: 0.0.0.9000
 Authors@R: 
     person("Claudia", "Penaloza", , "claudiapenaloza@gmail.com", role = c("aut", "cre"))
 Description: Playing around with european futbol data to exemplify package 
-    development.
+    development. I like lunch.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
