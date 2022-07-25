@@ -1,0 +1,68 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# ussie
+
+<!-- badges: start -->
+[![R-CMD-check](https://github.com/cpenaloza/ussie/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/cpenaloza/ussie/actions/workflows/R-CMD-check.yaml)
+<!-- badges: end -->
+
+The goal of ussie is to explore the European League Football data back from 1880 something. 
+
+## Installation
+
+You can install the development version of ussie from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("cpenaloza/ussie")
+```
+
+## Example
+
+This is a basic example which shows you how to solve a common problem:
+
+```{r example}
+library(ussie)
+germany <- uss_make_matches(engsoccerdata::germany, "Germany")
+germany2 <- uss_make_matches(engsoccerdata::germany2, "Germany2")
+
+```
+
+\
+\
+
+### What does our data look like?
+```{r glimpsedata}
+dplyr::glimpse(germany)
+```
+
+\
+\
+
+### Let's plot that!
+```{r germany, echo = FALSE}
+
+library(ggplot2)
+library(magrittr)
+
+germany %>% 
+  dplyr::bind_rows(., germany2)  %>% 
+  ggplot(aes(season), colors = country) +
+  geom_boxplot()
+
+```
+
+In that case, don't forget to commit and push the resulting figure files, so they display on GitHub and CRAN.
