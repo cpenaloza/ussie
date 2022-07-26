@@ -118,6 +118,46 @@
 <span><span class="co">#&gt; $ visitor       <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "Aston Villa", "Blackpool", "Burnley", "Chelsea", "Evert…</span></span>
 <span><span class="co">#&gt; $ goals_home    <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 1, 1, 0, 2, 3, 1, 0, 2, 1, 1, 1, 2, 1, 2, 1, 4, 3, 2, 0,…</span></span>
 <span><span class="co">#&gt; $ goals_visitor <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 0, 1, 0, 1, 1, 0, 1, 4, 1, 0, 1, 0, 1, 0, 1, 1, 1, 0, 2,…</span></span></code></pre></div>
+<p>We can accumulate seasons:</p>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span></span>
+<span><span class="va">italy</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/uss_get_matches.html">uss_get_matches</a></span><span class="op">(</span><span class="st">"italy"</span><span class="op">)</span> <span class="op">|&gt;</span> <span class="fu"><a href="../reference/uss_make_teams_matches.html">uss_make_teams_matches</a></span><span class="op">(</span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/uss_make_seasons_cumulative.html">uss_make_seasons_cumulative</a></span><span class="op">(</span><span class="va">italy</span><span class="op">)</span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 50,808 × 12</span></span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># Groups:   country, tier, season, team [1,516]</span></span></span>
+<span><span class="co">#&gt;    country tier  season team     date       matches  wins draws losses points</span></span>
+<span><span class="co">#&gt;    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;fct&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;date&gt;</span>       <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;int&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;int&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;int&gt;</span></span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span> Italy   1       <span style="text-decoration: underline;">1</span>929 AC Milan 1929-10-06       1     1     0      0      2</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span> Italy   1       <span style="text-decoration: underline;">1</span>929 AC Milan 1929-10-13       2     2     0      0      4</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span> Italy   1       <span style="text-decoration: underline;">1</span>929 AC Milan 1929-10-20       3     2     0      1      4</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span> Italy   1       <span style="text-decoration: underline;">1</span>929 AC Milan 1929-10-27       4     3     0      1      6</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span> Italy   1       <span style="text-decoration: underline;">1</span>929 AC Milan 1929-11-03       5     3     1      1      7</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span> Italy   1       <span style="text-decoration: underline;">1</span>929 AC Milan 1929-11-10       6     3     1      2      7</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span> Italy   1       <span style="text-decoration: underline;">1</span>929 AC Milan 1929-11-17       7     3     1      3      7</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span> Italy   1       <span style="text-decoration: underline;">1</span>929 AC Milan 1929-11-24       8     4     1      3      9</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span> Italy   1       <span style="text-decoration: underline;">1</span>929 AC Milan 1929-12-08       9     4     1      4      9</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span> Italy   1       <span style="text-decoration: underline;">1</span>929 AC Milan 1929-12-15      10     5     1      4     11</span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># … with 50,798 more rows, and 2 more variables: goals_for &lt;int&gt;,</span></span></span>
+<span><span class="co">#&gt; <span style="color: #949494;">#   goals_against &lt;int&gt;</span></span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># ℹ Use `print(n = ...)` to see more rows, and `colnames()` to see all variable names</span></span></span>
+<span><span class="fu"><a href="../reference/uss_make_seasons_cumulative.html">uss_make_seasons_final</a></span><span class="op">(</span><span class="va">italy</span><span class="op">)</span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 1,516 × 12</span></span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># Groups:   country, season, tier [85]</span></span></span>
+<span><span class="co">#&gt;    country tier  season team        date       matches  wins draws losses points</span></span>
+<span><span class="co">#&gt;    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;fct&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>       <span style="color: #949494; font-style: italic;">&lt;date&gt;</span>       <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;int&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;int&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;int&gt;</span></span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span> Italy   1       <span style="text-decoration: underline;">1</span>929 Inter       1930-07-06      34    22     6      6     50</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span> Italy   1       <span style="text-decoration: underline;">1</span>929 Genova 189… 1930-07-06      34    20     8      6     48</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span> Italy   1       <span style="text-decoration: underline;">1</span>929 Juventus    1930-07-06      34    19     7      8     45</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span> Italy   1       <span style="text-decoration: underline;">1</span>929 Torino FC   1930-07-06      34    16     7     11     39</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span> Italy   1       <span style="text-decoration: underline;">1</span>929 SSC Napoli  1930-07-06      34    14     9     11     37</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span> Italy   1       <span style="text-decoration: underline;">1</span>929 AS Roma     1930-07-06      34    15     6     13     36</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span> Italy   1       <span style="text-decoration: underline;">1</span>929 Bologna FC  1930-07-06      34    14     8     12     36</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span> Italy   1       <span style="text-decoration: underline;">1</span>929 US Alessan… 1930-07-06      34    14     8     12     36</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span> Italy   1       <span style="text-decoration: underline;">1</span>929 Pro Vercel… 1930-07-06      34    12     9     13     33</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span> Italy   1       <span style="text-decoration: underline;">1</span>929 Brescia Ca… 1930-07-06      34    13     7     14     33</span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># … with 1,506 more rows, and 2 more variables: goals_for &lt;int&gt;,</span></span></span>
+<span><span class="co">#&gt; <span style="color: #949494;">#   goals_against &lt;int&gt;</span></span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># ℹ Use `print(n = ...)` to see more rows, and `colnames()` to see all variable names</span></span></span></code></pre></div>
   </main>
 </div>
 
