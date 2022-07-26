@@ -12,7 +12,7 @@ uss_make_matches(data_engsoc, country)
 \item{country}{one of spain, italy, germany, holland, england}
 }
 \value{
-A dataframe, tibble with columns \code{country}, \code{date}, \code{season}, \code{tier},
+A dataframe, tibble with columns \code{country}, \code{tier}, \code{season}, \code{date},
 \code{home}, \code{visitor}, \code{goals_home}, \code{goals_visitor}.
 }
 \description{

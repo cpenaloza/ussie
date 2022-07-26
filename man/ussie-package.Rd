@@ -6,12 +6,13 @@
 \alias{ussie-package}
 \title{ussie: Explore European Football Data}
 \description{
-Playing around with european futbol data to exemplify package development.
+Playing around with european futbol data to exemplify package development. I like lunch.
 }
 \seealso{
 Useful links:
 \itemize{
   \item \url{https://github.com/cpenaloza/ussie}
+  \item \url{https://cpenaloza.github.io/ussie/}
   \item Report bugs at \url{https://github.com/cpenaloza/ussie/issues}
 }
 
