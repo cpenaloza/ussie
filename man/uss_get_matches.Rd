@@ -4,7 +4,7 @@
 \alias{uss_get_matches}
 \title{Get a league-play tibble}
 \usage{
-uss_get_matches(country = uss_countries())
+uss_get_matches(country = uss_countries(), ...)
 }
 \arguments{
 \item{country}{one of spain, italy, germany, holland, england}
@@ -26,4 +26,5 @@ the source data.
 }
 \examples{
 uss_get_matches("england")
+uss_get_matches("england", season == 1966)
 }
