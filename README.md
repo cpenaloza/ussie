@@ -41,22 +41,20 @@ germany2 <- uss_make_matches(engsoccerdata::germany2, "Germany2")
 dplyr::glimpse(germany)
 #> Rows: 16,120
 #> Columns: 8
-#> $ country       <chr> "Germany", "Germany", "Germany", "Germany", "Germany", "~
-#> $ tier          <fct> 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,~
-#> $ season        <int> 1963, 1963, 1963, 1963, 1963, 1963, 1963, 1963, 1963, 19~
-#> $ date          <date> 1963-08-24, 1963-08-24, 1963-08-24, 1963-08-24, 1963-08~
-#> $ home          <chr> "Werder Bremen", "1. FC Saarbrucken", "TSV 1860 Munchen"~
-#> $ visitor       <chr> "Borussia Dortmund", "1. FC Koln", "Eintracht Braunschwe~
-#> $ goals_home    <int> 3, 0, 1, 1, 2, 1, 1, 1, 3, 4, 3, 4, 2, 2, 3, 1, 1, 0, 2,~
-#> $ goals_visitor <int> 2, 2, 1, 1, 0, 1, 4, 1, 3, 2, 0, 0, 3, 0, 1, 0, 3, 4, 3,~
+#> $ country       <chr> "Germany", "Germany", "Germany", "Germany", "Germany", "…
+#> $ tier          <fct> 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,…
+#> $ season        <int> 1963, 1963, 1963, 1963, 1963, 1963, 1963, 1963, 1963, 19…
+#> $ date          <date> 1963-08-24, 1963-08-24, 1963-08-24, 1963-08-24, 1963-08…
+#> $ home          <chr> "Werder Bremen", "1. FC Saarbrucken", "TSV 1860 Munchen"…
+#> $ visitor       <chr> "Borussia Dortmund", "1. FC Koln", "Eintracht Braunschwe…
+#> $ goals_home    <int> 3, 0, 1, 1, 2, 1, 1, 1, 3, 4, 3, 4, 2, 2, 3, 1, 1, 0, 2,…
+#> $ goals_visitor <int> 2, 2, 1, 1, 0, 1, 4, 1, 3, 2, 0, 0, 3, 0, 1, 0, 3, 4, 3,…
 ```
 
   
   
 
 ### Let’s plot that!
-
-    #> Warning: package 'ggplot2' was built under R version 4.1.3
 
 <img src="man/figures/README-germany-1.png" width="100%" />
 

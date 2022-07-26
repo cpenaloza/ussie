@@ -61,7 +61,7 @@ library(magrittr)
 
 germany %>% 
   dplyr::bind_rows(., germany2)  %>% 
-  ggplot(aes(season), colors = country) +
+  ggplot(aes(season, country)) +
   geom_boxplot()
 
 ```
