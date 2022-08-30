@@ -26,7 +26,7 @@ The goal of ussie is to explore the European League Football data back from 1880
 
 You can install the development version of ussie from [GitHub](https://github.com/) with:
 
-``` r
+``` {r}
 # install.packages("devtools")
 devtools::install_github("cpenaloza/ussie")
 ```

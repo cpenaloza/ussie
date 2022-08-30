@@ -20,6 +20,28 @@ You can install the development version of ussie from
 ``` r
 # install.packages("devtools")
 devtools::install_github("cpenaloza/ussie")
+#> Downloading GitHub repo cpenaloza/ussie@HEAD
+#> viridisLite (0.4.0 -> 0.4.1) [CRAN]
+#> pillar      (1.8.0 -> 1.8.1) [CRAN]
+#> scales      (1.2.0 -> 1.2.1) [CRAN]
+#> Installing 3 packages: viridisLite, pillar, scales
+#> Installing packages into 'C:/cp/R/Library'
+#> (as 'lib' is unspecified)
+#> package 'viridisLite' successfully unpacked and MD5 sums checked
+#> package 'pillar' successfully unpacked and MD5 sums checked
+#> package 'scales' successfully unpacked and MD5 sums checked
+#> 
+#> The downloaded binary packages are in
+#>  C:\Users\uia96863\AppData\Local\Temp\RtmpoXUAPn\downloaded_packages
+#> * checking for file 'C:\Users\uia96863\AppData\Local\Temp\RtmpoXUAPn\remotes2ec424f123ae\cpenaloza-ussie-c5fbcbb/DESCRIPTION' ... OK
+#> * preparing 'ussie':
+#> * checking DESCRIPTION meta-information ... OK
+#> * checking for LF line-endings in source and make files and shell scripts
+#> * checking for empty or unneeded directories
+#> * building 'ussie_0.0.0.9000.tar.gz'
+#> 
+#> Installing package into 'C:/cp/R/Library'
+#> (as 'lib' is unspecified)
 ```
 
 ## Example
